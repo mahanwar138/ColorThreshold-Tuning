@@ -13,7 +13,8 @@ def main():
     cv2.createTrackbar("Green", "Tracking", 0, 255, nothing)
 
     while True:
-        frame = cv2.imread('example_rock1.jpg')
+        
+        frame = cv2.imread(image)
         red_only = np.copy(frame)
         red_only[:, :, [0, 1]] = 0
         blue_only = np.copy(frame)
